@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Situs Pelayanan Publik Kota Banten</title>
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212; /* Warna gelap */
+            color: #00ff00; /* Warna teks hijau */
+            font-family: "Courier New", Courier, monospace; /* Gaya monospaced */
+            line-height: 1.5;
+        }
+
+        a {
+            color: #ff0000; /* Link dengan warna merah */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #444;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .box {
+            border: 1px solid #444; /* Kotak dengan garis tipis */
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 12px;
+        }
+
+        /* Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #1a1a1a;
+            color: #00ff00;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #1a1a1a;
+        }
+
+        table tr:hover {
+            background-color: #333;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+
+        /* Komentar */
+        .comments {
+            margin-top: 20px;
+        }
+
+        .comment-box {
+            background-color: #1a1a1a;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #444;
+        }
+
+        .comment-box h4 {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Backsound -->
+    <audio autoplay loop>
+        <source src="backsound.mp3" type="audio/mpeg">
+        <source src="backsound.ogg" type="audio/ogg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <!-- Header -->
+    <header>
+        <h1>Situs Pelayanan Publik Kota Banten</h1>
+        <p>Portal Resmi Pelayanan Publik Kota Banten</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#services">Layanan</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <div class="box">
+                <h2>Selamat Datang</h2>
+                <p>Portal ini menyediakan informasi dan layanan publik resmi untuk masyarakat Kota Banten. Kami berkomitmen untuk memberikan pelayanan yang cepat, transparan, dan aman.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="box">
+                <h2>Tentang Kami</h2>
+                <p>Kami adalah portal resmi Pemerintah Kota Banten yang bertujuan untuk meningkatkan aksesibilitas layanan publik melalui teknologi digital.</p>
+            </div>
+        </section>
+
+        <!-- Tabel Kegiatan -->
+        <section id="services">
+            <div class="box">
+                <h2>Kegiatan dan Layanan</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kegiatan</th>
+                            <th>Tanggal</th>
+                            <th>Lokasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sosialisasi e-Government</td>
+                            <td>2025-01-10</td>
+                            <td>Kantor Walikota Banten</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Pelatihan Pelayanan Publik</td>
+                            <td>2025-02-15</td>
+                            <td>Gedung Diklat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Komentar -->
+        <section id="comments">
+            <div class="box">
+                <h2>Komentar</h2>
+                <form id="commentForm">
+                    <input type="text" id="username" placeholder="Nama Anda" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+                    <textarea id="usercomment" placeholder="Komentar Anda" required style="width: 100%; padding: 8px;"></textarea>
+                    <button type="submit" style="margin-top: 10px; padding: 10px; background-color: #444; color: #00ff00; border: none;">Kirim</button>
+                </form>
+                <div class="comments" id="commentSection"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pemerintah Kota Banten. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const form = document.getElementById('commentForm');
+        const commentSection = document.getElementById('commentSection');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const usercomment = document.getElementById('usercomment').value;
+
+            if (username && usercomment) {
+                const commentBox = document.createElement('div');
+                commentBox.classList.add('comment-box');
+                commentBox.innerHTML = `
+                    <h4>${username}</h4>
+                    <p>${usercomment}</p>
+                `;
+                commentSection.appendChild(commentBox);
+
+                // Reset form
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>
